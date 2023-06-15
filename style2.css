@@ -1,0 +1,174 @@
+.dropdown-menu{
+	max-height: 200px;
+	overflow-y: scroll;
+}
+.dm-prov{
+}
+
+.bg-nav{
+	background-color: #680606;
+}
+
+.konten-2{
+	padding-top:40px;
+	padding-bottom: 20px;
+	background-color: #F5EDED;
+}
+
+.text-konten-2{
+	font-size: 18px;
+	padding-left: 40px;
+	font-family: arial;
+	font-weight: bold;
+	color: #680606;
+}
+
+.lljatim{
+	color: #680606;
+	margin-top: 30px;
+	margin-left: 91%; 
+}
+
+.lljateng{
+	color: #680606;
+	margin-top: 30px;
+	margin-left: 91%; 
+}
+
+.konten-3{
+	padding-top: 40px;
+	padding-bottom: 20px;
+	background-color: #FFFDE8;
+}
+
+.text-konten-3{
+	font-size: 18px;
+	padding-left: 40px;
+	font-family: arial;
+	font-weight: bold;
+	color: #680606;
+}
+
+.llprom{
+	color: #680606;
+	margin-top: 30px;
+	margin-left: 91%; 
+}
+
+.text-konten-4{
+	font-size: 24px;
+	font-family: arial;
+	font-weight: bold;
+	color: #680606;
+}
+
+.text-konten-5{
+	font-size: 24px;
+	font-family: arial;
+	font-weight: bold;
+	color: #680606;
+}
+
+.text-konten-6{
+	font-size: 30px;
+	font-family: arial;
+	font-weight: bold;
+	color: #680606;
+}
+
+.text-konten-7{
+	font-size: 16px;
+	font-family: arial;
+	color: #680606;
+}
+
+.text-konten-8{
+	font-size: 14px;
+	font-family: arial;
+	color: #680606;
+}
+
+.btnb{
+	margin-top: 7px;
+	margin-bottom: 15px;
+}
+
+.card:hover{
+	background: #680606;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, .50);
+	color: #ffffff;
+	transition: all ease-in-out .5s;
+}
+
+.card{
+	margin-top: 20px;
+}
+
+.grap{
+	position: relative;
+	background: url(gambar/grap.png);
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	overflow: hidden;
+	margin-bottom: -2rem !important;
+}
+
+.makan{
+	position: relative;
+	background: url(gambar/makan.png);
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	overflow: hidden;
+	margin-bottom: -2rem !important;
+}
+
+.rer{
+	position: relative;
+	background: url(gambar/rer.png);
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	overflow: hidden;
+	margin-bottom: -2rem !important;
+}
+
+.form-row{
+	margin-top: 20px;
+}
+
+.btn-reser{
+	margin-top: 20px;
+}
+
+
+#tanggal{
+  width:260px;
+}
+
+#cetak:before{
+  content:'Anda Memilih Tanggal :';
+  margin-right:15px;
+}
+
+.vid{
+	width: 90%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.text1p{
+	margin-left: 40px;
+}
+
+.menu{
+	margin-top: 30px;
+	width: 30%;
+}
+
+.menu2{
+	margin-top: 30px;
+	width: 90%;
+}
+

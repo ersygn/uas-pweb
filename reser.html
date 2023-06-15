@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="icon" href="gambar/logo-3.png">
+     <link href="style2.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>JNeran</title>
+  </head>
+  <body id="page-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-nav fixed-top" id="mnav">
+      <div class="container">
+          <a href="#" class="navbar-brand">
+                <img src="gambar/JN.png" height="40" alt="CoolBrand">
+            </a>
+             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="beranda.html">BERANDA <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="grafik.php">REKOMENDASI</a>
+              </li>
+               <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="resto.html">KULINER</a>
+              </li>
+              <li class="nav-item active">
+                    <a class="nav-link js-scroll-trigger" style="color: yellow;" href="reser.html">RESERVASI</a>
+              </li>
+          </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="jumbotron rer jumbotron-fluid">
+  <div class="container">
+    <br><br>
+     <center><h1 class="display-4" style="color: white; font-weight: bold;">Reservasi</h1></center>
+     <center><p class="lead" style="color: white;">Sekarang Juga</p></center>
+  </div>
+</div>
+
+<div class="container-fluid konten-2">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+    <br>
+    <center>
+      <font class="text-konten-6"> Hal Yang Perlu Diperhatikan</font>
+    </center>
+      <br>
+      <font class="text-konten-7">1. Silahkan isi jumlah pax sesuai dengan yang akan datang. Apabila jumlah pax yang terisi kurang atau melebihi yang terisi, kami tidak menjamin ketersediaan kursi pada  saat kedatangan jika jumlah pax tidak sesuai dengan yang terisi. <br><br>2. Untuk waktu tunda maksimal 15 menit. Jika lewat dari waktu yang ditentukan, kursi yang telah dipesan akan kami lepas. Harap berikan informasi untuk keterlambatan 1 jam sebelum waktu pemesanan. <br><br>3. Anak-anak berusia 2 tahun ke atas dihitung sebagai pax tambahan.
+      <br><br>4. Wajib Bayar Uang Muka/DP Rp 100.000</font>
+    </div>
+    <br><br>
+     <form method="POST" action="prosesreservasi.php" class="needs-validation" novalidate>
+      <div class="form-row">
+        <div class="col-12">
+          <label class="font-weight-bold">
+            Nama Tempat
+          </label>
+        </div>
+        <div class="col-12">
+            <input type="text" class="form-control" for="nama_resto" placeholder="Nama Tempat Makan..." name="nama_resto" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-sm-12 col-md-1 col-lg-1">
+          <label class="font-weight-bold">
+            Nama
+          </label>
+        </div>
+      <div class="col-sm-12 col-md-5 col-lg-5">
+        <input type="text" class="form-control" for="nama_customer" placeholder="Ketik Nama Lengkap Anda..." name="nama_customer" required><br>
+      </div>
+        <div class="col-sm-12 col-md-1 col-lg-1">
+          <label class="font-weight-bold">
+            No. Telp
+          </label>
+        </div>
+      <div class="col-sm-12 col-md-5 col-lg-5">
+        <input type="text" class="form-control" for="no_telp" placeholder="Ketik No. Telp Anda..." name="no_telp" required>
+      </div>
+    </div>
+     <div class="form-row">
+        <div class="col-sm-12 col-md-1 col-lg-1">
+          <label class="font-weight-bold">
+            Email
+          </label>
+        </div>
+      <div class="col-sm-12 col-md-5 col-lg-5">
+        <input type="text" class="form-control" for="email" placeholder="Ketik Email Anda..." name="email" required>
+        <br>
+      </div>
+        <div class="col-sm-12 col-md-1 col-lg-1">
+          <label class="font-weight-bold">
+            Pax
+          </label>
+        </div>
+      <div class="col-sm-3 col-md-4 col-lg-4">
+        <input type="text" class="form-control" for="pax" placeholder="Ketik Jumlah Pengunjung..." name="pax" required>
+      </div>
+      <div class="col-sm-2 col-md-1 col-lg-1">
+        <label><b>/Orang</b></label>
+      </div>
+    </div>
+     <div class="form-row">
+        <div class="col-sm-12 col-md-1 col-lg-1 ">
+          <label class="font-weight-bold">
+            Tanggal
+          </label>
+        </div>
+      <div class="col-sm-12 col-md-5 col-lg-5">
+        <input type='date' for='tanggal' name='tanggal' onchange='cetakTanggal()'/>
+
+          <!-- hasil akan tercetak di dalam div ini -->
+            <script>
+    // set default tanggal saat ini
+    document.querySelector('#tanggal').value = new Date().toISOString().substring(0, 10);
+
+    // fungsi onchange cetak nilai
+    function cetakTanggal() {
+    var tanggal = document.querySelector('#tanggal').value;
+    document.querySelector('#cetak').innerHTML = tanggal.split('-')[2]+'-'+tanggal.split('-')[1]+'-'+tanggal.split('-')[0];
+    }
+    </script>
+    <div id='cetak'>Hari ini</div>
+        <br>
+      </div>
+        <div class="col-sm-12 col-md-1 col-lg-1">
+        <label class="font-weight-bold">
+            Jam
+          </label>
+        </div>
+      <div class="col-sm-12 col-md-5 col-lg-5">
+        <input type="time" for="jam" name="jam" required><br>
+      </div>
+    </div>
+    <div class="form-row">
+        <div class="col-12">
+          <label class="font-weight-bold">
+           Catatan Menu
+          </label>
+        </div>
+        <div class="col-12">
+            <input type="text" class="form-control" for="catatan_menu" placeholder="format penulisan : Es teh 1, Nasi Goreng 1... (sesuai menu resto pilihan anda)" name="catatan_menu" style=" width: 100%; height: 80px;" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-12">
+          <label class="font-weight-bold">
+          Bukti Pembayaran
+          </label>
+        </div>
+        <div class="col-12">
+            <input type="file"  for="bukti_bayar" name="bukti_bayar" required>
+        </div>
+      </div>
+          <center>
+            <button type="submit" class="btn btn-danger btn-reser" onclick="pesan()">
+              Pesan tempat
+            </button>
+  </div>
+</form>
+</center>
+<footer class="sticky-footer bg-dark">
+          <div class="container my-auto">
+              <div class="copyright text-center my-auto">
+                  <span style="color: white;">&copy; JNeran 2023</span>
+              </div>
+          </div>
+      </footer>
+
+    <script> 
+        function pesan() { 
+            alert("Isi data anda dengan benar, " + "dan informasi terkait reservasi akan dikirimkan " + "pihak resto melalui email anda!!!"); 
+        } 
+    </script> 
+    <script>
+(function() {
+'use strict';
+window.addEventListener('load', function() {
+var forms =
+document.getElementsByClassName('needs-validation');
+var validation =
+Array.prototype.filter.call(forms, function(form) {
+  form.addEventListener('submit', function(event) {
+if (form.checkValidity() === false) {
+event.preventDefault();
+event.stopPropagation();
+}
+
+form.classList.add('was-validated');
+
+}, false);
+});
+}, false);
+})();
+</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+  </body>
+</html>
